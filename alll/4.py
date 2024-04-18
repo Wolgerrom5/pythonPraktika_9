@@ -1,10 +1,10 @@
 count = 0
 
-K = int(input("Введите количество веревок: "))
-
-while K != 0:
-    if K % 3 == 0:
+while True:
+    k = int(input('Введите количество веревок(или 0 для окончания): '))
+    if k == 0:
+        break
+    if k % 2 == 0 and k >= 6:
         count += 1
-    K = int(input("Введите количество веревок: "))
 
 print(count)
