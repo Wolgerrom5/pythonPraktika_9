@@ -1,9 +1,9 @@
-def palindrome(num):
+def is_palindrome(num):
     return str(num) == str(num)[::-1]
 
 
-i = 1
-while not (palindrome(i % 100000) and palindrome(i // 10 % 100000) and palindrome(i // 1000)):
-    i += 1
-
-print(i)
+for i in range(100000, 999999):
+    str_i = str(i)
+    if is_palindrome(int(str_i[1:])) and is_palindrome(int(str_i[2:])) and is_palindrome(i):
+        print(i)
+        break
